@@ -8,9 +8,16 @@ import { Student } from '../mock-student';
 })
 export class StudentsComponent implements OnInit {
 
+  public student: Student[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public addStudentManually(): void {
+    var student = new Student('Julian', 'Segundo', 'Science')
+    this.student.push(student)
   }
 
 }
