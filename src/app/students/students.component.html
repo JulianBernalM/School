@@ -1,4 +1,6 @@
-<button type="button" (click)="addStudentManually()">Add Student</button>
+<button type="button" (click)="addStudent()">Add Student</button>
 <ul>
   <h3 *ngFor="let student of student">{{student.name}}</h3>
 </ul>
+
+<button type="button" (click)="deleteStudent()">Delete Student</button>

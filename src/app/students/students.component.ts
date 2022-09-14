@@ -15,9 +15,13 @@ export class StudentsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public addStudentManually(): void {
+  public addStudent(): void {
     var student = new Student('Julian', 'Segundo', 'Science')
     this.student.push(student)
+  }
+
+  public deleteStudent(): void {
+    this.student.pop()
   }
 
 }
