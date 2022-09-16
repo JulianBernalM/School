@@ -12,9 +12,22 @@
   left: 0;
   background-color: rgb(124, 189, 245);
   margin: .5em;
-  padding: 0;
+  padding: 10;
   border-radius: 4px;
   display: flex;
   align-items:center;
   height: 2em;
+}
+
+//controls the buttons color: font color and background color
+//but only when I stand on the button
+.student button:hover {
+  color: white;
+  background-color:#385880;
+
+}
+
+.student .badge {
+  align-self: center;
+  color: rgb(0, 0, 0)
 }
