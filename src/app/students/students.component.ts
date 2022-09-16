@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Student } from '../mock-student';
+import { STUDENTS } from '../mock-student';
 
 @Component({
   selector: 'app-students',
