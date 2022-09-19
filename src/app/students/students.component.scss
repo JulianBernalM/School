@@ -14,9 +14,10 @@
   margin: .5em;
   padding: 10;
   border-radius: 4px;
-  display: flex;
+  display:flex;
   align-items:center;
   height: 2em;
+  color: white;
 }
 
 //controls the buttons color: font color and background color
@@ -29,5 +30,5 @@
 
 .student .badge {
   align-self: center;
-  color: rgb(0, 0, 0)
+  color: rgb(22, 163, 6)
 }

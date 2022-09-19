@@ -8,20 +8,20 @@
 </ul>
  -->
 
- <ul>
+ <ul class="student">
   <button type="button" (click)="deleteStudent()">Delete Student</button>
  </ul>
 
- <ul>
+ <ul class="student">
   <button type="button" (click)="addStudent()">Add Student</button>
  </ul>
 
- <h2>Students</h2>
-<div>
+ <h2>Students: </h2>
+<div class="student">
   <div *ngFor="let student of student">
     <h2>{{student.name}}</h2>
     <img width="100" [src]="student.Image" alt="Image">
-    <p>{{student.academicGrade}}</p>
-    <p>{{student.favoriteSubjects}}</p>
+    <p class="badge">{{student.academicGrade}}</p>
+    <p class="badge">{{student.favoriteSubjects}}</p>
   </div>
 </div>
