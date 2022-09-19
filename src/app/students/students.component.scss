@@ -10,7 +10,7 @@
   cursor: pointer;
   position:relative;
   left: 0;
-  background-color: rgb(124, 189, 245);
+  background-color: rgb(243, 70, 22);
   margin: .5em;
   padding: 10;
   border-radius: 4px;
@@ -26,6 +26,11 @@
   color: white;
   background-color:#385880;
 
+}
+
+.student button.selected {
+  background-color: #f00e06;
+  color: rgb(35, 9, 228);
 }
 
 .student .badge {
