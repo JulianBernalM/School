@@ -9,9 +9,9 @@ import { STUDENTS } from '../mock-students'
 })
 export class StudentsComponent implements OnInit {
 
-  public student = STUDENTS;
+  constructor() {}
 
-  constructor() { }
+  public student = STUDENTS;
 
   ngOnInit(): void {
   }
@@ -23,6 +23,6 @@ export class StudentsComponent implements OnInit {
   public addStudent(): void {
     var student = new Student('Julian', '/src/assets/Images/Estudiante_4.jpg', 'Once / Secundaria', 'Programming')
     this.student.push(student)
-
   }
+
   }
