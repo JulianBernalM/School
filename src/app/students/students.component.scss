@@ -1,39 +1,51 @@
+// grid design (cuadriculas)
 .student {
-  margin: 0 0 2em 0;
-  list-style-type: none;
-  padding: 0;
-  width: 18em;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 15px;
+  background-color: #256bc0;
+  padding: 10px;
+  list-style: none;
+  div {
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+    h2, p {
+      margin: 0;
+      color: white;
+      text-align: center;
+    }
+  }
+
+.badge {
+  color: white;
+}
+  // list-style-type: none;
+  // width: 20em;
+  // color: rgb(35, 129, 12);
 }
 
-.student button {
-  flex: 1;
-  cursor: pointer;
+// controls the array color in the class badge
+// .student .badge {
+//   color: rgb(22, 163, 6)
+// }
+
+//controls the buttons characteristic
+button {
   position:relative;
-  left: 0;
-  background-color: rgb(243, 70, 22);
+  background-color: #318bf8;
   margin: .5em;
-  padding: 10;
-  border-radius: 4px;
+  border-radius: 100px;
   display:flex;
   align-items:center;
-  height: 2em;
+  height: 1em;
   color: white;
 }
 
 //controls the buttons color: font color and background color
 //but only when I stand on the button
-.student button:hover {
+button:hover {
   color: white;
-  background-color:#385880;
-
-}
-
-.student button.selected {
-  background-color: #f00e06;
-  color: rgb(35, 9, 228);
-}
-
-.student .badge {
-  align-self: center;
-  color: rgb(22, 163, 6)
+  background-color:#256bc0;
 }
