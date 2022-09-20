@@ -21,8 +21,8 @@ export class StudentsComponent implements OnInit {
   }
 
   public addStudent(): void {
-    var student = new Student('Julian', '/src/assets/Images/Estudiante_4.jpg', 'Once / Secundaria', 'Programming')
-    this.student.push(student)
+    var studentAdded = new Student('Mario', '/src/assets/Images/Estudiante_4.jpg', 'Once / Secundaria', 'Programming')
+    this.student.push(studentAdded)
 
   }
   }

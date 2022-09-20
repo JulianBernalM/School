@@ -7,10 +7,12 @@
 </ul> -->
 
 <button type="button" (click)="addStudent()">Add Student</button>
+
 <button type="button" (click)="deleteStudent()">Delete Student</button>
 
  <h2>Students: </h2>
 <div class="student">
+  <li *ngIf="student.length === 0">No Students</li>
   <div *ngFor="let student of student">
     <hr>
     <h2>{{student.name}}</h2>
