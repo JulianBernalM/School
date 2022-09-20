@@ -1,11 +1,3 @@
- <!-- <ul class="student">
-  <button type="button" (click)="deleteStudent()">Delete Student</button>
- </ul>
-
- <ul class="student">
-  <button type="button" (click)="addStudent()">Add Student</button>
-</ul> -->
-
 <button type="button" (click)="addStudent()">Add Student</button>
 
 <button type="button" (click)="deleteStudent()">Delete Student</button>
@@ -14,10 +6,9 @@
 <div class="student">
   <li *ngIf="student.length === 0">No Students</li>
   <div *ngFor="let student of student">
-    <hr>
-    <h2>{{student.name}}</h2>
-    <img width="100" [src]="student.Image" alt="Image">
-    <p class="badge">{{student.academicGrade}}</p>
-    <p class="badge">{{student.favoriteSubjects}}</p>
+    <h2 class="badge">{{student.name}}</h2>
+    <img [src]="student.Image" alt="Image">
+    <p>{{student.academicGrade}}</p>
+    <p>{{student.favoriteSubjects}}</p>
   </div>
 </div>
