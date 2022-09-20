@@ -5,12 +5,12 @@
   width: 18em;
 }
 
-.student button {
+button {
   flex: 1;
   cursor: pointer;
   position:relative;
   left: 0;
-  background-color: rgb(243, 70, 22);
+  background-color: #318bf8;
   margin: .5em;
   padding: 10;
   border-radius: 4px;
@@ -22,16 +22,12 @@
 
 //controls the buttons color: font color and background color
 //but only when I stand on the button
-.student button:hover {
+button:hover {
   color: white;
-  background-color:#385880;
+  background-color:#256bc0;
 
 }
 
-.student button.selected {
-  background-color: #f00e06;
-  color: rgb(35, 9, 228);
-}
 
 .student .badge {
   align-self: center;
