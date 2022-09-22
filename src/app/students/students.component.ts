@@ -16,8 +16,8 @@ export class StudentsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public deleteStudent(): void {
-    this.student.pop()
+  public deleteStudent(index: number): void {
+    this.student.splice(index, 1)
   }
 
   public addStudent(): void {
