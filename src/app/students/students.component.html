@@ -1,6 +1,6 @@
 <button type="button" (click)="addStudent()">Add Student</button>
 
- <h2>Students: </h2>
+ <h2 class="badge">Students: </h2>
 <div class="student">
   <li *ngIf="student.length === 0">No Students</li>
   <div *ngFor="let student of student; index as i">

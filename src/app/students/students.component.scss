@@ -13,10 +13,14 @@
     }
     h2, p {
       margin: 0;
-      color: white;
+      color: black;
       text-align: center;
     }
   }
+}
+
+.badge {
+  color: white;
 }
 
 //controls the buttons characteristic
@@ -38,12 +42,13 @@ button {
 //controls the buttons color: font color and background color
 //but only when I stand on the button
 button:hover {
-  color: white;
+  color: #EABE3F;
   background-color:#1a4478;
 }
 
 a {
-  color: black;
+  color: #EABE3F;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
+  font-size:small;
 }
