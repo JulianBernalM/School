@@ -24,11 +24,15 @@ button {
   position:relative;
   background-color: #318bf8;
   margin: .5em;
-  border-radius: 100px;
+  border-radius: 4px;
   display:flex;
   align-items:center;
   height: 1em;
   color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 1rem;
 }
 
 //controls the buttons color: font color and background color
