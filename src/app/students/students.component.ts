@@ -11,17 +11,17 @@ export class StudentsComponent implements OnInit {
 
   constructor() {}
 
-  public student = STUDENTS;
+  public students = STUDENTS;
 
   ngOnInit(): void {
   }
 
   public deleteStudent(index: number): void {
-    this.student.splice(index, 1)
+    this.students.splice(index, 1)
   }
 
   public addStudent(): void {
-    var studentAdded = new Student('Mario', './assets/Images/Estudiante_4.jpg', 'Once / Secundaria', 'Programming')
-    this.student.push(studentAdded)
+    var studentToAdd = new Student('Mario', './assets/Images/Estudiante_4.jpg', 'Once / Secundaria', 'Programming')
+    this.students.push(studentToAdd)
   }
 }
