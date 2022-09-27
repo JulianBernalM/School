@@ -9,6 +9,18 @@
     <p>{{student.academicGrade}}</p>
     <p>{{student.favoriteSubjects}}</p>
     <button type="button" (click)="deleteStudent(i)">Delete Student</button>
+    <div class="input">
+      <label for="name">Name </label>
+      <input type="text" name="name" id="name" [(ngModel)]="student.name">
+    </div>
+    <div class="input">
+      <label for="academicGrade">Academic Grade </label>
+      <input type="text" name="academicGrade" id="academicGrade" [(ngModel)]="student.academicGrade">
+    </div>
+    <div class="input">
+      <label for="favoriteSubjects">Favorite Subjects </label>
+      <input type="text" name="favoriteSubjects" id="favoriteSubjects" [(ngModel)]="student.favoriteSubjects">
+    </div>
   </div>
 </div>
 
