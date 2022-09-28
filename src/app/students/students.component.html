@@ -9,17 +9,19 @@
     <p>{{student.academicGrade}}</p>
     <p>{{student.favoriteSubjects}}</p>
     <button type="button" (click)="deleteStudent(i)">Delete Student</button>
-    <div class="input">
-      <label for="name">Name </label>
-      <input type="text" name="name" id="name" [(ngModel)]="student.name">
-    </div>
-    <div class="input">
-      <label for="academicGrade">Academic Grade </label>
-      <input type="text" name="academicGrade" id="academicGrade" [(ngModel)]="student.academicGrade">
-    </div>
-    <div class="input">
-      <label for="favoriteSubjects">Favorite Subjects </label>
-      <input type="text" name="favoriteSubjects" id="favoriteSubjects" [(ngModel)]="student.favoriteSubjects">
+    <div>
+      <input type="text" required #nameInput="ngModel" [(ngModel)]="student.name">
+      <p class="message-error" [class.invalid]="nameInput.invalid">
+        El campo es obligatorio
+      </p>
+      <input type="text" required #academicGradeInput="ngModel" [(ngModel)]="student.academicGrade">
+      <p class="message-error" [class.invalid]="academicGradeInput.invalid">
+        El campo es obligatorio
+      </p>
+      <input type="text" required #favoriteSubjectsInput="ngModel" [(ngModel)]="student.favoriteSubjects">
+      <p class="message-error" [class.invalid]="favoriteSubjectsInput.invalid">
+        El campo es obligatorio
+      </p>
     </div>
   </div>
 </div>
