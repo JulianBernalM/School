@@ -57,7 +57,7 @@ a {
   background-color: #FAA228;
   opacity: 0;
   transition: all linear .5s;
-  &.invalid {
+  &.active {
     opacity: 1;
   }
 }
