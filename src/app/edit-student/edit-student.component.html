@@ -1,1 +1,16 @@
-<p>edit-student works!</p>
+<div *ngIf="student">
+  <h2>Edit Student</h2>
+  <input type="text" required #nameInput="ngModel" [(ngModel)]="student.name">
+  <p class="message-error" [class.active]="nameInput.invalid">
+    El campo es obligatorio
+  </p>
+  <input type="text" required #academicGradeInput="ngModel" [(ngModel)]="student.academicGrade">
+  <p class="message-error" [class.active]="academicGradeInput.invalid">
+    El campo es obligatorio
+  </p>
+  <input type="text" required #favoriteSubjectsInput="ngModel" [(ngModel)]="student.favoriteSubjects">
+  <p class="message-error" [class.active]="favoriteSubjectsInput.invalid">
+    El campo es obligatorio
+  </p>
+  <button type="button">Save</button>
+</div>

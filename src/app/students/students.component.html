@@ -4,26 +4,16 @@
 <div class="student">
   <li *ngIf="students.length === 0">No Students</li>
   <div *ngFor="let student of students; index as i">
-    <h2>{{student.name}}</h2>
+    <button [class.selected]="student === studentSelected" type="button" (click)="onSelect(student)">
+      <span>{{student.name}}</span>
+    </button>
     <img [src]="student.image" alt="Image">
     <p>{{student.academicGrade}}</p>
     <p>{{student.favoriteSubjects}}</p>
     <button type="button" (click)="deleteStudent(i)">Delete Student</button>
-    <div>
-      <input type="text" required #nameInput="ngModel" [(ngModel)]="student.name">
-      <p class="message-error" [class.active]="nameInput.invalid">
-        El campo es obligatorio
-      </p>
-      <input type="text" required #academicGradeInput="ngModel" [(ngModel)]="student.academicGrade">
-      <p class="message-error" [class.active]="academicGradeInput.invalid">
-        El campo es obligatorio
-      </p>
-      <input type="text" required #favoriteSubjectsInput="ngModel" [(ngModel)]="student.favoriteSubjects">
-      <p class="message-error" [class.active]="favoriteSubjectsInput.invalid">
-        El campo es obligatorio
-      </p>
-    </div>
   </div>
 </div>
+<hr>
+<app-edit-student [student]="studentSelected"></app-edit-student>
 
 <p><a href="https://www.w3schools.com/" target="_blank"> Conoce más información sobre Angular </a></p>

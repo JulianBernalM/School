@@ -9,6 +9,8 @@ import { STUDENTS } from '../mock-students'
 })
 export class StudentsComponent implements OnInit {
 
+  public studentSelected?: Student;
+
   constructor() {}
 
   public students = STUDENTS;
@@ -23,5 +25,9 @@ export class StudentsComponent implements OnInit {
   public addStudent(): void {
     var studentToAdd = new Student('Mario', './assets/Images/Estudiante_4.jpg', 'Once / Secundaria', 'Programming')
     this.students.push(studentToAdd)
+  }
+
+  public onSelect(student: Student): void {
+    this.studentSelected = student;
   }
 }
