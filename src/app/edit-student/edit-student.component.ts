@@ -7,7 +7,7 @@ import { Student } from '../class-student';
   styleUrls: ['./edit-student.component.scss']
 })
 export class EditStudentComponent implements OnInit {
-  @Input() student?: Student;
+  @Input() studentChosen?: Student;
 
   constructor() { }
 
