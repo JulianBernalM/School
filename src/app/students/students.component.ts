@@ -11,6 +11,10 @@ export class StudentsComponent implements OnInit {
 
   public studentSelected?: Student;
 
+  public onSelect(student: Student): void {
+    this.studentSelected = student;
+  }
+
   constructor(private schoolService: SchoolService) {}
 
   public students: Student[] = [];
@@ -31,9 +35,5 @@ export class StudentsComponent implements OnInit {
   public addStudent(): void {
     var studentToAdd = new Student('Mario', './assets/Images/Estudiante_4.jpg', 'Once / Secundaria', 'Programming')
     this.students.push(studentToAdd)
-  }
-
-  public onSelect(student: Student): void {
-    this.studentSelected = student;
   }
 }
