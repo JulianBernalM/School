@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Student } from '../class-student';
-import { STUDENTS } from '../mock-students'
+import { SchoolService } from '../school.service';
 
 @Component({
   selector: 'app-students',
@@ -11,11 +11,16 @@ export class StudentsComponent implements OnInit {
 
   public studentSelected?: Student;
 
-  constructor() {}
+  constructor(private schoolService: SchoolService) {}
 
-  public students = STUDENTS;
+  public students: Student[] = [];
 
   ngOnInit(): void {
+    this.getStudents();
+  }
+
+  public getStudents(): void {
+    this.students = this.schoolService.getStudents();
   }
 
   public deleteStudent(index: number): void {
