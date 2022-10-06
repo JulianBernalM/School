@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Student } from '../class-student';
 import { SchoolService } from '../school.service';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-students',
@@ -13,9 +14,10 @@ export class StudentsComponent implements OnInit {
 
   public onSelect(student: Student): void {
     this.studentSelected = student;
+    this.messageService.add('StudentComponent: Selected student id=${student.id}')
   }
 
-  constructor(private schoolService: SchoolService) {}
+  constructor(private schoolService: SchoolService, private messageService: MessageService) {}
 
   public students: Student[] = [];
 
