@@ -20,7 +20,8 @@ export class StudentsComponent implements OnInit {
   }
 
   public getStudents(): void {
-    this.students = this.schoolService.getStudents();
+    this.schoolService.getStudents()
+        .subscribe(students => this.students = students)
   }
 
   public deleteStudent(index: number): void {
