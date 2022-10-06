@@ -13,7 +13,7 @@ export class SchoolService {
 
   public getStudents(): Observable<Student[]> {
     const students = of(STUDENTS)
-    this.messageService.add('ESTE ES UN MENSAJE DE PRUEBA')
+    this.messageService.add('Selected students information:')
     return students;
   }
 
