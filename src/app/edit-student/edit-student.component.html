@@ -1,19 +1,23 @@
-<div *ngIf="studentChosen">
-  <h2>Edit Student</h2>
-  <h5>Name</h5>
-  <input type="text" required #nameInput="ngModel" [(ngModel)]="studentChosen.name">
-  <p class="message-error" [class.active]="nameInput.invalid">
-    El campo es obligatorio
-  </p>
-  <h5>Academic Grade</h5>
-  <input type="text" required #academicGradeInput="ngModel" [(ngModel)]="studentChosen.academicGrade">
-  <p class="message-error" [class.active]="academicGradeInput.invalid">
-    El campo es obligatorio
-  </p>
-  <h5>Favorites Subjects</h5>
-  <input type="text" required #favoriteSubjectsInput="ngModel" [(ngModel)]="studentChosen.favoriteSubjects">
-  <p class="message-error" [class.active]="favoriteSubjectsInput.invalid">
-    El campo es obligatorio
-  </p>
-  <button type="button">Save</button>
-</div>
+<body>
+  <div *ngIf="studentChosen">
+    <h2>Edit Student</h2>
+    <h5>Name</h5>
+    <input type="text" required #nameInput="ngModel" [(ngModel)]="studentChosen.name">
+    <p class="message-error" [class.active]="nameInput.invalid">
+      El campo es obligatorio
+    </p>
+    <h5>Academic Grade</h5>
+    <input type="text" required #academicGradeInput="ngModel" [(ngModel)]="studentChosen.academicGrade">
+    <p class="message-error" [class.active]="academicGradeInput.invalid">
+      El campo es obligatorio
+    </p>
+    <h5>Favorites Subjects</h5>
+    <input type="text" required #favoriteSubjectsInput="ngModel" [(ngModel)]="studentChosen.favoriteSubjects">
+    <p class="message-error" [class.active]="favoriteSubjectsInput.invalid">
+      El campo es obligatorio
+    </p>
+    <button type="button">Save</button>
+  </div>
+</body>
+
+
