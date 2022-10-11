@@ -14,7 +14,7 @@ export class StudentsComponent implements OnInit {
 
   public onSelect(student: Student): void {
     this.studentSelected = student;
-    this.messageService.add(`HeroesComponent: Selected hero id=${student.name}`);
+    this.messageService.add(`The student selected is: ${student.name}`);
   }
 
   constructor(private schoolService: SchoolService, private messageService: MessageService) {}
