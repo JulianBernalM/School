@@ -14,7 +14,7 @@ export class StudentsComponent implements OnInit {
 
   public onSelect(student: Student): void {
     this.studentSelected = student;
-    this.messageService.add('StudentComponent: Selected student id=${student.id}')
+    this.messageService.add(`HeroesComponent: Selected hero id=${student.name}`);
   }
 
   constructor(private schoolService: SchoolService, private messageService: MessageService) {}
@@ -30,8 +30,11 @@ export class StudentsComponent implements OnInit {
         .subscribe(students => this.students = students)
   }
 
-  public deleteStudent(index: number): void {
-    this.students.splice(index, 1)
+  public deleteStudent(student: Student) {
+    var studentsFilter = this.students.filter(function(nameStudent) {
+      return nameStudent.name !== student.name;
+    })
+  this.students = studentsFilter;
   }
 
   public addStudent(): void {
